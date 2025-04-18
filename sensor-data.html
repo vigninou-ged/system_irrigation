@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Données des Capteurs - Irrigation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="css/irrigation.css">
+</head>
+<body>
+    <div class="container py-5">
+        <!-- Bouton de bascule mode clair/sombre -->
+        <div class="d-flex justify-content-end mb-3">
+            <button id="theme-toggle" class="btn btn-outline-secondary btn-sm">
+                <span class="theme-icon">🌙</span> Mode Sombre
+            </button>
+        </div>
+        <h1 class="text-center mb-4">Données des Capteurs</h1>
+        <!-- Bouton de retour -->
+        <div class="mb-3">
+            <button class="btn btn-secondary" onclick="window.location.href='index.html'">Retour au Tableau de Bord</button>
+        </div>
+        <!-- Tableau des données -->
+        <div class="card p-4">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Heure</th>
+                        <th>Capteur</th>
+                        <th>Valeur</th>
+                    </tr>
+                </thead>
+                <tbody id="sensor-table-body"></tbody>
+            </table>
+            <!-- Boutons d'exportation -->
+            <div class="d-flex gap-2 mt-3">
+                <button class="btn btn-success btn-export" onclick="exportToExcel()">Exporter en Excel</button>
+                <button class="btn btn-primary btn-export" onclick="exportToCSV()">Exporter en CSV</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript personnalisé -->
+    <script src="js/irrigation.js"></script>
+</body>
+</html>
