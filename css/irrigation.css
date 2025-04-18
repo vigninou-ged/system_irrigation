@@ -5,6 +5,8 @@
     --text-color: #343a40;
     --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     --btn-outline: #6c757d;
+    --table-bg: #ffffff;
+    --table-border: #dee2e6;
 }
 
 /* Variables pour mode sombre */
@@ -14,6 +16,8 @@ body.dark-mode {
     --text-color: #e9ecef;
     --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     --btn-outline: #adb5bd;
+    --table-bg: #343a40;
+    --table-border: #495057;
 }
 
 body {
@@ -81,4 +85,37 @@ p {
 #theme-toggle:hover {
     background-color: var(--btn-outline);
     color: var(--bg-card);
+}
+
+/* Table Styling */
+.table {
+    background-color: var(--table-bg);
+    border-color: var(--table-border);
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.table thead th {
+    background-color: var(--bg-card);
+    color: var(--text-color);
+    border-color: var(--table-border);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Export Buttons */
+.btn-export {
+    transition: all 0.2s;
+}
+
+.btn-export:hover {
+    transform: scale(1.05);
 }
